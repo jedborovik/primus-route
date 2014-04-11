@@ -5,7 +5,7 @@ function routes(action, route, fn) {
   return { server: createRoute(action, route, fn) };
 }
 
-function createRoute(action, routes, fn) {
+function createRoute(action, route, fn) {
   return function(primus) {
     primus.transform('incoming', function(packet) { 
       if (packet.data.action === action && packet.data.route === route) {
