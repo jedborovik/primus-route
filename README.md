@@ -4,7 +4,7 @@
  
  ```
  var _ = require('primus-route');
- primus.use('new user', _.post('/user'), users.create)
+ primus.use('new user', _.post('/user', users.create));
  ```
 
 
