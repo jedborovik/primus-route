@@ -1,6 +1,6 @@
-var methods = require('methods');
 var client = require('./lib/client');
 var server = require('./lib/server');
+var methods = require('./lib/methods');
 
 exports.client = client;
 

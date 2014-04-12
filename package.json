@@ -1,6 +1,6 @@
 {
   "name": "primus-route",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "RESTful routing for primus websockets",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,5 @@
   "author": "Jed Borovik",
   "license": "MIT",
   "dependencies": {
-    "methods": "^0.1.0"
   }
 }
