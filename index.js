@@ -1,16 +1,28 @@
+var methods = require('methods');
 
-exports = module.exports = routes;
+methods.forEach(function(method) {
+  exports[method] = create(method);
+});
 
-function routes(action, route, fn) {
-  return { server: createRoute(action, route, fn) };
-}
+exports.del = exports.delete;
+exports.all = create();
 
-function createRoute(action, route, fn) {
-  return function(primus) {
-    primus.transform('incoming', function(packet) { 
-      if (packet.data.action === action && packet.data.route === route) {
-        fn(packet);
-      }
-    });
+function create(method) {
+  if (method) method = method.toUpperCase();
+
+  return function(path, fn) {
+    var route = Object.create(null);
+
+    // intercept incoming server messages
+    route.server = function(primus) {
+      primus.transform('incoming', function(packet) {
+        var m = packet.data.method && packet.data.method.toUppercase();
+        var p = packet.data.path;
+
+        if (m === method && p === path) fn(packet);
+      });
+    }
+
+    return route;
   }
 }

@@ -1,11 +1,14 @@
 {
   "name": "primus-route",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "RESTful routing for primus websockets",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jed Borovik",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "methods": "^0.1.0"
+  }
 }
