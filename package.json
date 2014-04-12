@@ -1,6 +1,6 @@
 {
   "name": "primus-route",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "RESTful routing for primus websockets",
   "main": "index.js",
   "scripts": {
