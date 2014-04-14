@@ -7,7 +7,6 @@ var server = require('./lib/server');
 var methods = require('./lib/methods');
 var debug = require('debug')('primus-router');
 
-
 /**
  * Router prototype.
  */

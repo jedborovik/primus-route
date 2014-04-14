@@ -1,6 +1,6 @@
 {
   "name": "primus-router",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "RESTful routing for primus websockets",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "Jed Borovik",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jedborovik/primus-router.git"
+  },
   "dependencies": {
     "debug": "^0.8.0"
   }

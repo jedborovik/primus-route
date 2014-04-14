@@ -13,5 +13,5 @@
 
 ## Installation
 ```js
-$ npm install primus-route
+$ npm install primus-router
 ```
